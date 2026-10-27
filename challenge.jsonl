@@ -1,0 +1,20 @@
+{"qid": "C001", "query": "502 failures followed rollout; upstream resets correlate with pod readiness changes.", "gold_doc_ids": ["gateway-upstream-502"], "split": "challenge"}
+{"qid": "C002", "query": "Tail of gateway response time regressed with retry amplification and pool waits.", "gold_doc_ids": ["gateway-tail-latency"], "split": "challenge"}
+{"qid": "C003", "query": "The identity client changed callback scheme and path and login now fails.", "gold_doc_ids": ["identity-oauth-redirect"], "split": "challenge"}
+{"qid": "C004", "query": "Token verifier caches stale public keys while kid identifiers rotate.", "gold_doc_ids": ["identity-jwks-cache"], "split": "challenge"}
+{"qid": "C005", "query": "Consumer group rebalance and partition skew drive increasing unprocessed event counts.", "gold_doc_ids": ["stream-consumer-lag"], "split": "challenge"}
+{"qid": "C006", "query": "Poison event batches land in DLQ; replay must be bounded and idempotent.", "gold_doc_ids": ["stream-dead-letter"], "split": "challenge"}
+{"qid": "C007", "query": "Private bucket downloads denied because workload identity lacks prefix permission.", "gold_doc_ids": ["storage-object-403"], "split": "challenge"}
+{"qid": "C008", "query": "Fresh search records missing because the ingestion checkpoint is behind.", "gold_doc_ids": ["search-index-stale"], "split": "challenge"}
+{"qid": "C009", "query": "Custom autoscaler metric causes noisy replica flapping under stable demand.", "gold_doc_ids": ["platform-hpa-flap"], "split": "challenge"}
+{"qid": "C010", "query": "After rotating a credential, mounted secret does not reload in long-lived pods.", "gold_doc_ids": ["platform-secret-rollout"], "split": "challenge"}
+{"qid": "C011", "query": "Interactive BI requests wait behind transformations for warehouse concurrency slots.", "gold_doc_ids": ["analytics-warehouse-queue"], "split": "challenge"}
+{"qid": "C012", "query": "Active user dashboards disagree due to metric grain and timezone filters.", "gold_doc_ids": ["analytics-metric-disagree"], "split": "challenge"}
+{"qid": "C013", "query": "How do we repair an OAuth device authorization grant polling error?", "gold_doc_ids": [], "split": "challenge"}
+{"qid": "C014", "query": "Kafka controller election metadata is corrupt; what recovery steps are approved?", "gold_doc_ids": [], "split": "challenge"}
+{"qid": "C015", "query": "Vector search embeddings have inconsistent dimensions across model versions.", "gold_doc_ids": [], "split": "challenge"}
+{"qid": "C016", "query": "How do we restore encrypted object backups after a ransomware incident?", "gold_doc_ids": [], "split": "challenge"}
+{"qid": "C017", "query": "What treaty override should be used for cross-border tax withholding?", "gold_doc_ids": [], "split": "challenge"}
+{"qid": "C018", "query": "Pod security admission policy rejects privileged init containers.", "gold_doc_ids": [], "split": "challenge"}
+{"qid": "C019", "query": "MFA QR code enrollment fails on a mobile authenticator.", "gold_doc_ids": [], "split": "challenge"}
+{"qid": "C020", "query": "How do we migrate a legacy database from MySQL to PostgreSQL?", "gold_doc_ids": [], "split": "challenge"}

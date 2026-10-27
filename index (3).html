@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TraceRAG evidence audit</title><style>
+body{background:#f4f7fb;color:#152238;font:16px/1.6 system-ui,sans-serif;margin:0}
+main{max-width:1000px;margin:auto;padding:40px 24px}
+header{background:#10243a;color:#f9fafb;padding:30px;border-radius:16px}
+header p{color:#c6d6e8}.tag{font-size:12px;letter-spacing:.15em;color:#62ddc2;text-transform:uppercase}
+section{background:white;padding:24px;margin:22px 0;border-radius:14px;box-shadow:0 3px 15px #15223810}
+img{width:100%;max-width:850px;display:block;margin:auto}
+table{border-collapse:collapse;width:100%;overflow-x:auto}td,th{padding:10px;text-align:left;border-bottom:1px solid #e6e9f0}
+small{color:#4b5563}
+</style></head><body><main><header><div class="tag">Offline RAG evaluation</div>
+<h1>TraceRAG Evidence Audit</h1><p>Split: test · Document-level retrieval · Extractive evidence only</p></header>
+<section><h2>Retriever comparison</h2><table><thead><tr><th>Mode</th><th>Recall@1</th><th>Recall@3</th><th>MRR@5</th><th>Supported response accuracy</th><th>Unsupported false-answer rate</th></tr></thead><tbody><tr><td>bm25</td><td>0.958</td><td>1.000</td><td>0.979</td><td>0.719</td><td>0.250</td></tr><tr><td>tfidf</td><td>1.000</td><td>1.000</td><td>1.000</td><td>0.719</td><td>0.250</td></tr><tr><td>hybrid</td><td>1.000</td><td>1.000</td><td>1.000</td><td>0.719</td><td>0.250</td></tr></tbody></table>
+<p><small>Scores reflect a small, synthetic benchmark. Citation correctness is evaluated against gold document IDs, not human-labeled answer spans. Confidence is a lexical similarity score, not a calibrated probability.</small></p></section>
+<section><h2>Finding the correct runbook</h2><img alt="Document retrieval comparison" src="retrieval_comparison.png"></section>
+<section><h2>When should the system abstain?</h2><img alt="Confidence distributions" src="confidence_distribution.png"></section>
+<section><h2>Evidence decision audit</h2><img alt="Hybrid answer and abstention counts" src="evidence_audit.png"></section>
+<section><h2>Reproduce</h2><code>python -m tracerag.cli evaluate --split test --out reports</code><p>Review the CSV files for per-question errors and the JSON file for unrounded aggregate metrics.</p></section>
+</main></body></html>

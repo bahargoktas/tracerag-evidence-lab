@@ -1,0 +1,44 @@
+{"qid": "Q001", "query": "Gateway is suddenly returning 502 after a backend rollout. What should the on-call inspect and roll back?", "gold_doc_ids": ["gateway-upstream-502"], "split": "dev", "category": "answerable"}
+{"qid": "Q002", "query": "Only the 99th percentile at the gateway is slow; which retry and connection pool settings matter?", "gold_doc_ids": ["gateway-tail-latency"], "split": "test", "category": "answerable"}
+{"qid": "Q003", "query": "Edge HTTPS handshake errors appeared near certificate expiry. What checks and renewal are required?", "gold_doc_ids": ["gateway-tls-expiry"], "split": "test", "category": "answerable"}
+{"qid": "Q004", "query": "Normal API clients are getting 429 errors. How do we restore approved client quotas safely?", "gold_doc_ids": ["gateway-rate-limit"], "split": "test", "category": "answerable"}
+{"qid": "Q005", "query": "Login fails because an OAuth callback URI does not match registration. What should we compare?", "gold_doc_ids": ["identity-oauth-redirect"], "split": "dev", "category": "answerable"}
+{"qid": "Q006", "query": "New signing keys make valid JWTs fail verification. How should JWKS caches be handled?", "gold_doc_ids": ["identity-jwks-cache"], "split": "test", "category": "answerable"}
+{"qid": "Q007", "query": "Users bounce endlessly between login pages. Which cookie and callback settings should we inspect?", "gold_doc_ids": ["identity-session-loop"], "split": "test", "category": "answerable"}
+{"qid": "Q008", "query": "TOTP codes are rejected on several nodes. What clock checks should be done without weakening MFA?", "gold_doc_ids": ["identity-mfa-time"], "split": "test", "category": "answerable"}
+{"qid": "Q009", "query": "A billing event produced two invoices after retry delivery. How do idempotency records help?", "gold_doc_ids": ["billing-webhook-duplicate"], "split": "dev", "category": "answerable"}
+{"qid": "Q010", "query": "Daily invoice exports are several hours behind. Which queue and worker actions are approved?", "gold_doc_ids": ["billing-export-delay"], "split": "test", "category": "answerable"}
+{"qid": "Q011", "query": "Ledger totals disagree with settled transactions. What should happen to the reconciliation batch?", "gold_doc_ids": ["billing-reconciliation"], "split": "test", "category": "answerable"}
+{"qid": "Q012", "query": "Invoices have different tax calculations across regions. What ruleset rollback is appropriate?", "gold_doc_ids": ["billing-tax-rollout"], "split": "test", "category": "answerable"}
+{"qid": "Q013", "query": "Kafka consumers are falling behind. How can partition lag be reduced without resetting offsets?", "gold_doc_ids": ["stream-consumer-lag"], "split": "dev", "category": "answerable"}
+{"qid": "Q014", "query": "Producer changes are rejected by schema registry. How should backward compatibility be restored?", "gold_doc_ids": ["stream-schema-break"], "split": "test", "category": "answerable"}
+{"qid": "Q015", "query": "The dead letter queue is filling with parse failures. How should replay be done?", "gold_doc_ids": ["stream-dead-letter"], "split": "test", "category": "answerable"}
+{"qid": "Q016", "query": "After deployment a consumer reads from the wrong offset. What should be checked before rewinding?", "gold_doc_ids": ["stream-offset-drift"], "split": "test", "category": "answerable"}
+{"qid": "Q017", "query": "New workload cannot download private bucket objects and gets 403. How do we fix its policy?", "gold_doc_ids": ["storage-object-403"], "split": "dev", "category": "answerable"}
+{"qid": "Q018", "query": "Unfinished multipart uploads keep accumulating. Which lifecycle rule addresses this?", "gold_doc_ids": ["storage-multipart-leak"], "split": "test", "category": "answerable"}
+{"qid": "Q019", "query": "Objects replicate slowly to the DR region. How do we validate cross-region consistency?", "gold_doc_ids": ["storage-replication-lag"], "split": "test", "category": "answerable"}
+{"qid": "Q020", "query": "Users get expired presigned URLs during long downloads. How should the application refresh them?", "gold_doc_ids": ["storage-signed-url"], "split": "test", "category": "answerable"}
+{"qid": "Q021", "query": "Newly ingested records are missing from search. How should checkpoint replay be performed?", "gold_doc_ids": ["search-index-stale"], "split": "dev", "category": "answerable"}
+{"qid": "Q022", "query": "Search replicas are unassigned because of disk constraints. What allocation checks are needed?", "gold_doc_ids": ["search-shard-unassigned"], "split": "test", "category": "answerable"}
+{"qid": "Q023", "query": "Complex search filters time out. Which query and concurrency adjustments should be tried?", "gold_doc_ids": ["search-query-timeout"], "split": "test", "category": "answerable"}
+{"qid": "Q024", "query": "Search aliases use different analyzers and tokenization differs. What rebuild is needed?", "gold_doc_ids": ["search-analyzer-drift"], "split": "test", "category": "answerable"}
+{"qid": "Q025", "query": "Pods enter CrashLoopBackOff after deployment. Which logs and rollback steps matter?", "gold_doc_ids": ["platform-crashloop"], "split": "dev", "category": "answerable"}
+{"qid": "Q026", "query": "The HPA keeps scaling up and down under stable traffic. What stabilization controls help?", "gold_doc_ids": ["platform-hpa-flap"], "split": "test", "category": "answerable"}
+{"qid": "Q027", "query": "Kubernetes nodes show DiskPressure and evict pods. What cleanup is safe?", "gold_doc_ids": ["platform-node-disk"], "split": "test", "category": "answerable"}
+{"qid": "Q028", "query": "An app still uses old credentials after secret rotation. How do we propagate new secrets?", "gold_doc_ids": ["platform-secret-rollout"], "split": "test", "category": "answerable"}
+{"qid": "Q029", "query": "dbt source freshness checks fail before the reporting job. How should models be rerun?", "gold_doc_ids": ["analytics-dbt-freshness"], "split": "dev", "category": "answerable"}
+{"qid": "Q030", "query": "Dashboard queries spend too long waiting for warehouse slots. How should workloads be separated?", "gold_doc_ids": ["analytics-warehouse-queue"], "split": "test", "category": "answerable"}
+{"qid": "Q031", "query": "Two dashboards disagree on active customer counts. What semantic metric details need alignment?", "gold_doc_ids": ["analytics-metric-disagree"], "split": "test", "category": "answerable"}
+{"qid": "Q032", "query": "Required event attributes suddenly become null. How should affected partitions be quarantined?", "gold_doc_ids": ["analytics-null-surge"], "split": "test", "category": "answerable"}
+{"qid": "U001", "query": "How do we diagnose a Redis eviction storm caused by maxmemory policy?", "gold_doc_ids": [], "split": "dev", "category": "unanswerable"}
+{"qid": "U002", "query": "Which DNSSEC key rollover procedure fixes invalid RRSIG signatures?", "gold_doc_ids": [], "split": "test", "category": "unanswerable"}
+{"qid": "U003", "query": "What steps rotate an Apple push notification signing key?", "gold_doc_ids": [], "split": "test", "category": "unanswerable"}
+{"qid": "U004", "query": "How should GPU memory fragmentation be mitigated for inference workers?", "gold_doc_ids": [], "split": "dev", "category": "unanswerable"}
+{"qid": "U005", "query": "What is the emergency response for a compromised hardware security module?", "gold_doc_ids": [], "split": "test", "category": "unanswerable"}
+{"qid": "U006", "query": "How do we restore a corrupted PostgreSQL write ahead log?", "gold_doc_ids": [], "split": "test", "category": "unanswerable"}
+{"qid": "U007", "query": "What is the procedure for repairing a GraphQL query depth limiter?", "gold_doc_ids": [], "split": "dev", "category": "unanswerable"}
+{"qid": "U008", "query": "How do we recover a mobile app crash caused by iOS keychain migration?", "gold_doc_ids": [], "split": "test", "category": "unanswerable"}
+{"qid": "U009", "query": "What is the runbook for a CDN geo routing incident?", "gold_doc_ids": [], "split": "test", "category": "unanswerable"}
+{"qid": "U010", "query": "How should payroll SFTP credentials be renewed?", "gold_doc_ids": [], "split": "dev", "category": "unanswerable"}
+{"qid": "U011", "query": "What steps fix an ML model feature store online-offline skew?", "gold_doc_ids": [], "split": "test", "category": "unanswerable"}
+{"qid": "U012", "query": "How do we troubleshoot a DNS resolver negative caching outage?", "gold_doc_ids": [], "split": "test", "category": "unanswerable"}

@@ -1,0 +1,21 @@
+qid,split,query,answerable,gold_doc_ids,top_doc_id,top_section,confidence,answered,citation_correct,decision_correct,outcome_correct,recall@1,mrr@1,ndcg@1,recall@3,mrr@3,ndcg@3,recall@5,mrr@5,ndcg@5
+C001,challenge,502 failures followed rollout; upstream resets correlate with pod readiness changes.,True,"[""gateway-upstream-502""]",gateway-upstream-502,Diagnosis,0.243897,True,True,True,True,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+C002,challenge,Tail of gateway response time regressed with retry amplification and pool waits.,True,"[""gateway-tail-latency""]",gateway-tail-latency,Diagnosis,0.359285,True,True,True,True,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+C003,challenge,The identity client changed callback scheme and path and login now fails.,True,"[""identity-oauth-redirect""]",identity-oauth-redirect,Diagnosis,0.193659,False,False,False,False,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+C004,challenge,Token verifier caches stale public keys while kid identifiers rotate.,True,"[""identity-jwks-cache""]",identity-jwks-cache,Diagnosis,0.276457,True,True,True,True,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+C005,challenge,Consumer group rebalance and partition skew drive increasing unprocessed event counts.,True,"[""stream-consumer-lag""]",stream-consumer-lag,Diagnosis,0.405823,True,True,True,True,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+C006,challenge,Poison event batches land in DLQ; replay must be bounded and idempotent.,True,"[""stream-dead-letter""]",stream-dead-letter,Mitigation,0.221855,False,False,False,False,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+C007,challenge,Private bucket downloads denied because workload identity lacks prefix permission.,True,"[""storage-object-403""]",storage-object-403,Diagnosis,0.381023,True,True,True,True,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+C008,challenge,Fresh search records missing because the ingestion checkpoint is behind.,True,"[""search-index-stale""]",search-index-stale,Diagnosis,0.310677,True,True,True,True,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+C009,challenge,Custom autoscaler metric causes noisy replica flapping under stable demand.,True,"[""platform-hpa-flap""]",platform-hpa-flap,Mitigation,0.276104,True,True,True,True,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+C010,challenge,"After rotating a credential, mounted secret does not reload in long-lived pods.",True,"[""platform-secret-rollout""]",platform-secret-rollout,Diagnosis,0.24328,True,True,True,True,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+C011,challenge,Interactive BI requests wait behind transformations for warehouse concurrency slots.,True,"[""analytics-warehouse-queue""]",analytics-warehouse-queue,Diagnosis,0.258268,True,True,True,True,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+C012,challenge,Active user dashboards disagree due to metric grain and timezone filters.,True,"[""analytics-metric-disagree""]",analytics-metric-disagree,Diagnosis,0.44768,True,True,True,True,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+C013,challenge,How do we repair an OAuth device authorization grant polling error?,False,[],identity-oauth-redirect,Symptoms,0.150878,False,False,True,True,,,,,,,,,
+C014,challenge,Kafka controller election metadata is corrupt; what recovery steps are approved?,False,[],storage-replication-lag,Escalation,0.208489,False,False,True,True,,,,,,,,,
+C015,challenge,Vector search embeddings have inconsistent dimensions across model versions.,False,[],search-analyzer-drift,Symptoms,0.165178,False,False,True,True,,,,,,,,,
+C016,challenge,How do we restore encrypted object backups after a ransomware incident?,False,[],storage-object-403,Mitigation,0.201118,False,False,True,True,,,,,,,,,
+C017,challenge,What treaty override should be used for cross-border tax withholding?,False,[],billing-tax-rollout,Escalation,0.277366,True,False,False,False,,,,,,,,,
+C018,challenge,Pod security admission policy rejects privileged init containers.,False,[],gateway-tls-expiry,Escalation,0.261839,True,False,False,False,,,,,,,,,
+C019,challenge,MFA QR code enrollment fails on a mobile authenticator.,False,[],identity-mfa-time,Verification,0.231592,False,False,True,True,,,,,,,,,
+C020,challenge,How do we migrate a legacy database from MySQL to PostgreSQL?,False,[],,,0.0,False,False,True,True,,,,,,,,,

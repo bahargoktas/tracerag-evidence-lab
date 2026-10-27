@@ -1,0 +1,9 @@
+{
+  "mode": "hybrid",
+  "threshold": 0.24,
+  "selection": "max balanced (correct citation on answerable, abstain on unsupported); ties prefer higher threshold",
+  "development_balanced_score": 0.9375,
+  "development_supported_response_accuracy": 0.916667,
+  "development_question_count": 12,
+  "warning": "Similarity score is not a calibrated probability. Test split was not used to tune."
+}

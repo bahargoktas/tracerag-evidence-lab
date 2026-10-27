@@ -1,0 +1,30 @@
+{
+  "query": "How should JWKS caches be refreshed after signing key rotation?",
+  "mode": "hybrid",
+  "similarity_threshold": 0.24,
+  "abstained": false,
+  "notice": "Verbatim runbook evidence, not a generated or verified answer.",
+  "evidence": {
+    "citation": "[identity-jwks-cache § Escalation]",
+    "path": "data/runbooks/identity-jwks-cache.md",
+    "excerpt": "Escalate to identity security if a signing key is missing from the issuer.",
+    "similarity": 0.529
+  },
+  "retrieved": [
+    {
+      "doc_id": "identity-jwks-cache",
+      "section": "Escalation",
+      "similarity": 0.529
+    },
+    {
+      "doc_id": "platform-secret-rollout",
+      "section": "Symptoms",
+      "similarity": 0.0757
+    },
+    {
+      "doc_id": "billing-webhook-duplicate",
+      "section": "Diagnosis",
+      "similarity": 0.052
+    }
+  ]
+}
